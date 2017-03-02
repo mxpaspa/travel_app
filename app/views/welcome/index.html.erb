@@ -1,2 +1,16 @@
 <h1>Welcome to my travel site</h1>
 <p>Filler Text</p>
+
+<!-- <%= @homeland %> -->
+
+
+<% @images.each do |image| %>
+
+    <%= image_tag image, class: 'img-responsive' %>
+
+<% end %>
+
+<!-- <%= image_tag 'Croatia.jpg', alt: 'Croatia', id: 'new_zealand', class: 'country', height: 300, width: 400 %>
+<%= image_tag 'Canada.jpg', alt: 'Canada', id: 'canada', class: 'country', height: 300, width: 400 %>
+<%= image_tag 'Germany.jpg', alt: 'Germany', id: 'germany', class: 'country', height: 300, width: 400 %>
+<%= image_tag 'Mexico.jpg', alt: 'Mexico', id: 'mexico', class: 'country', height: 300, width: 400 %> -->
