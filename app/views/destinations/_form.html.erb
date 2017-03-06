@@ -26,7 +26,20 @@
     <%= f.text_area :description, class: "form-control", rows: "5" %>
   </div>
 
+  <div class="field form-group">
+    <%= f.label "Photo" %><br />
+    <%= f.file_field :avatar %>
+  </div>
+
+
   <div class="actions form-group">
     <%= f.submit class: "btn btn-primary" %>
   </div>
+
+  <div class"field form-group">
+    <%= f.label :population %><br />
+    <%= f.number_field :population, class: "form-control" %>
+  </div>
+
+
 <% end %>

@@ -1,7 +1,9 @@
 <h1>My Destination Wish List</h1>
 
-<ul class='nav-pills', role='tablist'>
-  <%= link_to 'All', destinations_path %>
+<ul class='nav nav-pills', role='tablist'>
+  <li>
+    <%= link_to 'All', destinations_path %>
+  </li>
   <% @my_countries.each do |c| %>
     <li> <%= link_to "#{c.country}", destinations_path(country: c.country)%> </li>
   <% end %>
@@ -13,8 +15,12 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <h2><%= destination.city %></h2>
-            <h3><%=destination.country %></h3>
+            <h3><%= destination.country %></h3>
+            <% if destination.avatar_file_name != nil %>
+              <%= image_tag destination.avatar.url(:medium), class: 'img-responsive' %>
+            <% end %>
             <p><%= destination.description %></p>
+            <p> Poplulation: <%= destination.population %></p>
 
             <div class="btn-group">
               <%= link_to 'Show', destination, class: "btn btn-default" %>
